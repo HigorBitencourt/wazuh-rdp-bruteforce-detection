@@ -1,11 +1,16 @@
 
 #  RDP Brute Force Detection with Wazuh
 
+![Status](https://img.shields.io/badge/status-completed-brightgreen)
+![Platform](https://img.shields.io/badge/platform-Wazuh-blue)
+![Lab](https://img.shields.io/badge/environment-Home%20Lab-orange)
+![OS](https://img.shields.io/badge/OS-Linux%20%7C%20Windows-blue)
+![Type](https://img.shields.io/badge/type-SOC%20Lab-purple)
+
 ##  Overview
+This project demonstrates the detection and automated response to RDP brute force attacks using Wazuh SIEM in a real home lab environment.
 
-This project demonstrates the detection and automated response to RDP brute force attacks using Wazuh SIEM.
-
-The lab simulates a real-world attack scenario where an attacker attempts to gain access to a Windows machine via RDP using brute force techniques.
+The lab simulates a real-world scenario where an attacker attempts to gain access to a Windows machine via RDP using brute force techniques.
 
 ---
 
@@ -119,9 +124,24 @@ hydra -t 4 -V -l Higao -P /usr/share/wordlists/rockyou.txt rdp://<TARGET_IP>
 
 ---
 
-##  Screenshots
+## Screenshots
 
+The following images show the detection and automated response to an RDP brute force attack.
 
+### Wazuh Dashboard Overview
+![Dashboard](screenshots/dashboard-overview.png)
+
+### RDP Brute Force Attack Detection (Rule Level 12)
+Multiple failed login attempts triggering Wazuh correlation rules.
+![RDP Detection](screenshots/rdp-bruteforce-detection.png)
+
+### Active Response Execution (Firewall Trigger)
+Wazuh triggers a custom script that blocks the attacker IP in real time.
+![Active Response](screenshots/active-response-logs.png)
+
+### Attacker IP Blocked via iptables
+Firewall rule automatically created to block the attacker IP.
+![iptables](screenshots/iptables-blocked-ip.png)
 
 
 ---
