@@ -1,5 +1,5 @@
 
-#  RDP Brute Force Detection with Wazuh
+#  🚨 RDP Brute Force Detection & Automated Response (SOC Lab)
 
 ![Status](https://img.shields.io/badge/status-completed-brightgreen)
 ![Platform](https://img.shields.io/badge/platform-Wazuh-blue)
@@ -8,9 +8,7 @@
 ![Type](https://img.shields.io/badge/type-SOC%20Lab-purple)
 
 ##  Overview
-This project demonstrates the detection and automated response to RDP brute force attacks using Wazuh SIEM in a real home lab environment.
-
-The lab simulates a real-world scenario where an attacker attempts to gain access to a Windows machine via RDP using brute force techniques.
+This project simulates a real-world brute force attack against a Windows machine and demonstrates how a SOC analyst can detect and respond automatically using Wazuh SIEM.
 
 ---
 
