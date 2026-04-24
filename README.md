@@ -8,9 +8,20 @@
 ![Type](https://img.shields.io/badge/type-SOC%20Lab-purple)
 
 ##  Overview
-This project simulates a real-world brute force attack against a Windows machine and demonstrates how a SOC analyst can detect and respond automatically using Wazuh SIEM.
+
+This project simulates a real-world brute force attack against a Windows machine and demonstrates how a SOC analyst detects, analyzes, and responds to the threat using SIEM (Wazuh).
+
+The implementation includes log analysis, event correlation, alert generation, and automated incident response with real-time attacker IP blocking.
 
 ---
+
+##  🚨 Key Features
+
+✔️ Real-world brute force attack simulation (RDP)  
+✔️ Threat detection via log correlation (Wazuh SIEM)  
+✔️ High severity alert generation (Level 12)  
+✔️ Automated incident response (Active Response)  
+✔️ Real-time attacker IP blocking using iptables  
 
 ##  Lab Environment
 
@@ -33,15 +44,27 @@ All devices were connected through the same local network (Ethernet + Wi-Fi), pr
 
 ---
 
+## 🧠 SOC Skills Demonstrated
+
+- Threat detection through log analysis  
+- Event correlation and rule creation (SIEM)  
+- Incident response automation  
+- Security monitoring and alert investigation  
+- Firewall-based threat mitigation  
+
+---
+
 ##  Technologies Used
 
-* Wazuh SIEM
-* Windows Security Logs
-* Kali Linux
-* Hydra (brute force tool)
-* Bash scripting
-* iptables (active response)
-
+- Wazuh (SIEM)
+- Windows Security Logs
+- Kali Linux (Attacker)
+- Hydra (Brute Force Tool)
+- Bash scripting
+- iptables (Active Response / Firewall)
+- Ubuntu Linux
+- Windows
+  
 ---
 
 ##  Detection Logic
@@ -119,6 +142,23 @@ hydra -t 4 -V -l Higao -P /usr/share/wordlists/rockyou.txt rdp://<TARGET_IP>
 * Script debugging
 * Field mapping (`win.eventdata.ipAddress`)
 * Firewall configuration issues
+  
+---
+
+## 📈 Possible Improvements
+
+- Integration with IDS for network-based detection  
+- Centralized logging with ELK Stack  
+- Alert notifications (email/webhook)  
+- Dashboard customization for SOC workflows
+  
+---
+
+##  Use Case
+
+This project represents a real SOC scenario where an analyst must identify repeated failed login attempts, correlate events, and take automated action to mitigate the threat.
+
+The solution reduces response time and prevents unauthorized access by blocking the attacker in real time.
 
 ---
 
@@ -146,4 +186,7 @@ Firewall rule automatically created to block the attacker IP.
 
 ## Author
 
-Higor
+
+Higor Bitencourt  
+Cybersecurity Student | SOC / Blue Team  
+[GitHub](https://github.com/HigorBitencourt)
